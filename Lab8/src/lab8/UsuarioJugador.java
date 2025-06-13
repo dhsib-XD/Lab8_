@@ -9,12 +9,13 @@ package lab8;
  * @author Nathan
  */
 public class UsuarioJugador {
+
     private String usuario;
     private String contra;
     private int puntos;
-    
-    public Jugador(String usuario, String contra){
-        
+
+    public Jugador(String usuario, String contra) {
+
     }
-    
+
 }
