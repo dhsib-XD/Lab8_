@@ -4,11 +4,19 @@
  */
 package laboratorio8;
 
+import java.util.HashMap;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author CarlosXl
  */
 public class iniciarsesion extends javax.swing.JFrame {
+private static HashMap<String, String> usuarios = new HashMap<>();
+public static HashMap<String, String> getUsuarios() {
+    return usuarios;
+    
+}
 
     /**
      * Creates new form iniciarsesion
@@ -28,12 +36,12 @@ public class iniciarsesion extends javax.swing.JFrame {
 
         checkbox1 = new java.awt.Checkbox();
         salir = new javax.swing.JButton();
-        isc = new javax.swing.JTextField();
         ISusuario = new javax.swing.JLabel();
         IScontra = new javax.swing.JLabel();
         isu = new javax.swing.JTextField();
         sesion = new javax.swing.JLabel();
         verificar = new javax.swing.JButton();
+        ISc = new javax.swing.JPasswordField();
 
         checkbox1.setLabel("checkbox1");
 
@@ -56,6 +64,11 @@ public class iniciarsesion extends javax.swing.JFrame {
         sesion.setText("Iniciar Sesion");
 
         verificar.setText("Aceptar");
+        verificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                verificarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -71,22 +84,21 @@ public class iniciarsesion extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(95, 95, 95)
                         .addComponent(sesion)))
-                .addContainerGap(106, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(isc)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(isu)
-                        .addContainerGap())))
+                .addComponent(isu)
+                .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(83, 83, 83)
                 .addComponent(verificar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(salir)
                 .addGap(124, 124, 124))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(ISc, javax.swing.GroupLayout.DEFAULT_SIZE, 488, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -100,8 +112,8 @@ public class iniciarsesion extends javax.swing.JFrame {
                 .addGap(38, 38, 38)
                 .addComponent(IScontra)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(isc, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
+                .addComponent(ISc, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(salir, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(verificar, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -115,6 +127,34 @@ public class iniciarsesion extends javax.swing.JFrame {
 new Menu_Principal().setVisible(true);
         this.dispose();        
     }//GEN-LAST:event_salirActionPerformed
+
+    private void verificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verificarActionPerformed
+     String usuario = isu.getText().trim();
+        String contrasena = new String(ISc.getPassword()).trim();
+
+        // Validar campos vacíos
+        if (usuario.isEmpty() || contrasena.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Usuario y contraseña son obligatorios", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        // Obtener el HashMap de usuarios desde Registro
+        HashMap<String, String> usuarios = (HashMap<String, String>) Registro.getUsuarios();
+
+        // Verificar si el usuario existe y la contraseña coincide
+        if (usuarios.containsKey(usuario)) {
+            if (usuarios.get(usuario).equals(contrasena)) {
+                JOptionPane.showMessageDialog(this, "Bienvenido, " + usuario, "Inicio de sesión exitoso", JOptionPane.INFORMATION_MESSAGE);
+                // Aquí puedes abrir la ventana principal del programa
+            } else {
+                JOptionPane.showMessageDialog(this, "Contraseña incorrecta", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "Usuario no registrado", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    
+   
+    }//GEN-LAST:event_verificarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -152,10 +192,10 @@ new Menu_Principal().setVisible(true);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPasswordField ISc;
     private javax.swing.JLabel IScontra;
     private javax.swing.JLabel ISusuario;
     private java.awt.Checkbox checkbox1;
-    private javax.swing.JTextField isc;
     private javax.swing.JTextField isu;
     private javax.swing.JButton salir;
     private javax.swing.JLabel sesion;

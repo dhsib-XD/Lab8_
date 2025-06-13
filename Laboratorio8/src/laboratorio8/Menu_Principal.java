@@ -121,7 +121,8 @@ public class Menu_Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_salidaActionPerformed
 
     private void iniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarActionPerformed
-        
+         new iniciarsesion().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_iniciarActionPerformed
 
     private void registroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registroActionPerformed
