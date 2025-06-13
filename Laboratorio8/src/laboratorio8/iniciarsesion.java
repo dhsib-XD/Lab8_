@@ -27,7 +27,7 @@ public class iniciarsesion extends javax.swing.JFrame {
     private void initComponents() {
 
         checkbox1 = new java.awt.Checkbox();
-        salida = new javax.swing.JButton();
+        salir = new javax.swing.JButton();
         isc = new javax.swing.JTextField();
         ISusuario = new javax.swing.JLabel();
         IScontra = new javax.swing.JLabel();
@@ -39,10 +39,10 @@ public class iniciarsesion extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        salida.setText("Salir");
-        salida.addActionListener(new java.awt.event.ActionListener() {
+        salir.setText("Salir");
+        salir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                salidaActionPerformed(evt);
+                salirActionPerformed(evt);
             }
         });
 
@@ -85,7 +85,7 @@ public class iniciarsesion extends javax.swing.JFrame {
                 .addGap(83, 83, 83)
                 .addComponent(verificar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(salida)
+                .addComponent(salir)
                 .addGap(124, 124, 124))
         );
         layout.setVerticalGroup(
@@ -103,7 +103,7 @@ public class iniciarsesion extends javax.swing.JFrame {
                 .addComponent(isc, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(salida, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(salir, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(verificar, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(21, 21, 21))
         );
@@ -111,10 +111,10 @@ public class iniciarsesion extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void salidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salidaActionPerformed
+    private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed
 new Menu_Principal().setVisible(true);
         this.dispose();        
-    }//GEN-LAST:event_salidaActionPerformed
+    }//GEN-LAST:event_salirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -157,7 +157,7 @@ new Menu_Principal().setVisible(true);
     private java.awt.Checkbox checkbox1;
     private javax.swing.JTextField isc;
     private javax.swing.JTextField isu;
-    private javax.swing.JButton salida;
+    private javax.swing.JButton salir;
     private javax.swing.JLabel sesion;
     private javax.swing.JButton verificar;
     // End of variables declaration//GEN-END:variables
