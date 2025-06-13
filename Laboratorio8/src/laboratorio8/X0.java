@@ -15,6 +15,8 @@ public class X0 extends javax.swing.JFrame {
      */
     public X0() {
         initComponents();
+        setLocationRelativeTo(this);
+        borde1.setForeground(java.awt.Color.BLACK);
     }
 
     /**
@@ -26,21 +28,152 @@ public class X0 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        borde1 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.setForeground(new java.awt.Color(204, 204, 204));
+        jPanel1.setLayout(null);
+
+        borde1.setBackground(new java.awt.Color(0, 0, 255));
+        borde1.setForeground(new java.awt.Color(51, 0, 255));
+        borde1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 50));
+        jPanel1.add(borde1);
+        borde1.setBounds(140, 0, 20, 520);
+
+        jLabel1.setText("jLabel1");
+        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 50));
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(330, 0, 20, 520);
+
+        jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 50));
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(0, 160, 500, 20);
+
+        jLabel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 50));
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(0, 340, 500, 20);
+
+        jButton1.setBackground(new java.awt.Color(204, 204, 204));
+        jButton1.setBorder(null);
+        jButton1.setOpaque(true);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1);
+        jButton1.setBounds(10, 30, 110, 110);
+
+        jButton2.setBackground(new java.awt.Color(204, 204, 204));
+        jButton2.setBorder(null);
+        jButton2.setOpaque(true);
+        jPanel1.add(jButton2);
+        jButton2.setBounds(190, 30, 110, 110);
+
+        jButton3.setBackground(new java.awt.Color(204, 204, 204));
+        jButton3.setBorder(null);
+        jButton3.setOpaque(true);
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton3);
+        jButton3.setBounds(370, 30, 110, 110);
+
+        jButton4.setBackground(new java.awt.Color(204, 204, 204));
+        jButton4.setBorder(null);
+        jButton4.setOpaque(true);
+        jPanel1.add(jButton4);
+        jButton4.setBounds(10, 210, 110, 110);
+
+        jButton5.setBackground(new java.awt.Color(204, 204, 204));
+        jButton5.setBorder(null);
+        jButton5.setOpaque(true);
+        jPanel1.add(jButton5);
+        jButton5.setBounds(190, 210, 110, 110);
+
+        jButton6.setBackground(new java.awt.Color(204, 204, 204));
+        jButton6.setBorder(null);
+        jButton6.setOpaque(true);
+        jPanel1.add(jButton6);
+        jButton6.setBounds(370, 210, 110, 110);
+
+        jButton7.setBackground(new java.awt.Color(204, 204, 204));
+        jButton7.setBorder(null);
+        jButton7.setOpaque(true);
+        jPanel1.add(jButton7);
+        jButton7.setBounds(10, 390, 110, 110);
+
+        jButton8.setBackground(new java.awt.Color(204, 204, 204));
+        jButton8.setBorder(null);
+        jButton8.setOpaque(true);
+        jPanel1.add(jButton8);
+        jButton8.setBounds(190, 390, 110, 110);
+
+        jButton9.setBackground(new java.awt.Color(204, 204, 204));
+        jButton9.setBorder(null);
+        jButton9.setOpaque(true);
+        jPanel1.add(jButton9);
+        jButton9.setBounds(370, 390, 110, 110);
+
+        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laboratorio8/icons8-salida-32.png"))); // NOI18N
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 566, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 502, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton10)
+                .addContainerGap(17, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 432, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(474, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton10ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +211,20 @@ public class X0 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel borde1;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
