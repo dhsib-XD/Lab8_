@@ -31,7 +31,7 @@ public class Menu_Principal extends javax.swing.JFrame {
         panel = new javax.swing.JPanel();
         jButton3 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        registro = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -57,11 +57,11 @@ public class Menu_Principal extends javax.swing.JFrame {
             }
         });
 
-        jButton6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton6.setText("Registro");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        registro.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        registro.setText("Registro");
+        registro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                registroActionPerformed(evt);
             }
         });
 
@@ -71,7 +71,7 @@ public class Menu_Principal extends javax.swing.JFrame {
             panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelLayout.createSequentialGroup()
                 .addGap(38, 38, 38)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(registro, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(49, 49, 49)
                 .addComponent(jButton5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
@@ -84,7 +84,7 @@ public class Menu_Principal extends javax.swing.JFrame {
                 .addGap(68, 68, 68)
                 .addGroup(panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(registro, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(66, Short.MAX_VALUE))
         );
@@ -121,13 +121,13 @@ public class Menu_Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-       
+        
     }//GEN-LAST:event_jButton5ActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-       new iniciarsesion().setVisible(true);
+    private void registroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registroActionPerformed
+       new Registro().setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_registroActionPerformed
 
     /**
      * @param args the command line arguments
@@ -167,8 +167,8 @@ public class Menu_Principal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JLabel menu;
     private javax.swing.JPanel panel;
+    private javax.swing.JButton registro;
     // End of variables declaration//GEN-END:variables
 }
